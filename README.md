@@ -36,7 +36,7 @@ obj.setImage("", {
 |配置项|说明|可选项|含义|默认值|
 |:---:|:---:|:---:|:---:|:---:|
 |layout|布局类型|1<br />2<br />3<br />4|拼图布局<br />瀑布布局<br />木桶布局<br />方块布局|2|
-|fullscreenState|点击图片全屏|true<br />false<|启用全屏<br />禁止全屏|true|
+|fullscreenState|点击图片全屏|true<br />false|启用全屏<br />禁止全屏|true|
 |gutter|图片间距|number<br />&gt;0|间距(px)|0|
 |puzzleHeight|拼图布局拼图区域高度|Number<br />&gt;0|高度(px)|800|
 |coulumn|瀑布布局列数|Number<br />&gt;0<br />|瀑布布局列数|4|
@@ -54,3 +54,6 @@ obj.addImage(["./img/example1.jpg", "./img/example2.jpg"]);
 ## 关于图片顺序
 ***注：添加多张图片时，将会等待一张图片加载完后再加载下一张，显示的图片顺序与输入的数组中的顺序保持一致。***
 
+
+##License
+[MIT](https://opensource.org/licenses/MIT)
