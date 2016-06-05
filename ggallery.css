@@ -1,0 +1,294 @@
+html,body
+{
+    outline: none;
+    border: 0;
+    height: 100%;
+}
+
+#gGalleryFullscreen
+{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+}
+
+#gGalleryLeftArrow
+{
+    height: 0;
+    width: 0;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+    border-right:  80px solid #777;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    cursor: pointer;
+
+}
+#gGalleryLeftArrow:hover
+{
+    border-right:  80px solid #999;
+}
+
+#gGalleryRightArrow
+{
+    height: 0;
+    width: 0;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+    border-left:  80px solid #777;
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    cursor: pointer;
+
+}
+#gGalleryRightArrow:hover
+{
+    border-left:  80px solid #999;
+}
+
+.bigPic
+{
+    height: 70%;
+    max-width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.001,0.001);
+    z-index: 3; 
+    transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+
+
+/*PUZZLE layout*/
+.puzzle-1,
+.puzzle-2,
+.puzzle-3,
+.puzzle-4,
+.puzzle-5,
+.puzzle-6
+{
+    position: relative;
+    min-width: 800px;
+}
+
+.ggalleryBox
+{
+    position: relative;
+    box-sizing: border-box;
+}
+
+.puzzle-1 img,
+.puzzle-2 img,
+.puzzle-3 img,
+.puzzle-4 img,
+.puzzle-5 img,
+.puzzle-6 img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* for one image box selected */
+.puzzle-1 .ggalleryBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* for two image box selected */
+.puzzle-2 .ggalleryBox:nth-child(1)
+{
+    position: absolute;
+    height: 100%;
+    width: 66.6%;
+    left: 0;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+}
+
+.puzzle-2 .ggalleryBox:nth-child(2)
+{
+    position: absolute;
+    height: 100%;
+    width: 66.6%;
+    right: 0;
+    -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* for three image box selected */
+.puzzle-3 .ggalleryBox:nth-child(1)
+{
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+
+.puzzle-3 .ggalleryBox:nth-child(2)
+{
+    position: absolute;
+    height: 50%;
+    right: 0;
+    top: 0;
+}
+
+.puzzle-3 .ggalleryBox:nth-child(3)
+{
+    position: absolute;
+    height: 50%;
+    right: 0;
+    bottom: 0;
+}
+
+/* for four image box selected */
+.puzzle-4 .ggalleryBox
+{
+    float: left;
+    height: 50%;
+    width: 50%;
+}
+
+/* for five image box selected */
+.puzzle-5 .ggalleryBox
+{
+    position: absolute;
+}
+
+.puzzle-5 .ggalleryBox:nth-child(1)
+{
+    height: 66.7%;
+    width: 66.7%;
+    top: 0;
+    left: 0;
+}
+
+.puzzle-5 .ggalleryBox:nth-child(2)
+{
+    width: 33.3%;
+    top: 0;
+    right: 0;
+}
+
+.puzzle-5 .ggalleryBox:nth-child(3)
+{
+    height: 33.3%;
+    width: 33.3%;
+    bottom: 0;
+    left: 0;
+}
+
+.puzzle-5 .ggalleryBox:nth-child(4)
+{
+    height: 33.3%;
+    width: 33.4%;
+    bottom: 0;
+    left: 33.3%;
+}
+
+.puzzle-5 .ggalleryBox:nth-child(5)
+{
+    width: 33.3%;
+    bottom: 0;
+    right: 0;
+}
+
+/* for six image box selected */
+.puzzle-6 .ggalleryBox
+{
+    height: 33.3%;
+    width: 33.3%;
+    float: left;
+}
+
+.puzzle-6 .ggalleryBox:nth-child(1)
+{
+    width: 66.6%;
+    height: 66.7%;
+}
+
+.puzzle-6 .ggalleryBox:nth-child(2),
+.puzzle-6 .ggalleryBox:nth-child(3),
+.puzzle-6 .ggalleryBox:nth-child(4)
+{
+    width: 33.4%;
+    float: right;
+}
+
+/*WaterFall layout*/
+.waterfall
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: row nowrap;
+}
+
+.ggalleryWaterfallColunms
+{
+    min-height: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.ggalleryWaterfallColunms .ggalleryBox img
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/*BarrelBin layout*/
+.ggalleryBarrelBinRows
+{
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ggalleryBarrelBinRows .ggalleryBox
+{
+    height: 100%;
+}
+
+.ggalleryBarrelBinRows .ggalleryBox img
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+/*square layout*/
+.square
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.square .ggalleryBox
+{
+    margin: 0;
+    float: left;
+}
+
+.square .ggalleryBox img
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: center;
+}

@@ -1,0 +1,140 @@
+html,body
+{
+    width: 100%;
+    margin: 0;
+    background-color: #34495e;
+    font-family: Helvetica,Tahoma,Arial,STXihei,\\534E\6587\7EC6\9ED1,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,SimSun,\\5B8B\4F53,Heiti,\\9ED1\4F53,sans-serif;
+}
+
+header
+{
+    width: 100%;
+    height: 60px;
+    background-color: #FFF;
+    border-bottom: 2px solid rgba(1,1,1,0,7);
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+}
+
+#setting
+{
+    width: 60px;
+    margin: 0;
+    height: 60px;
+    float: left;
+    outline: none;
+    background-color: #FFF;
+    border: none;
+    color: #F75C2F;
+    text-align: center;
+    cursor: pointer;
+    transition: color,background-color 0.2s ease-in-out;
+}
+
+#setting:hover
+{
+    background-color: #F75C2F;
+    color: #FFF;
+    transition: color,background-color 0.2s ease-in-out;
+}
+
+#setting i
+{
+    display: block;
+    margin: auto;
+}
+
+
+header h3
+{
+    line-height: 60px;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: lighter;
+    cursor: default;
+    margin: 0;
+    text-align: center;
+}
+
+#ggalleryContainer
+{
+    width: 70%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+#controler
+{
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    background-color: rgba(0,0,0,0.3);
+    color: #FFF;
+    text-align: center;
+    box-sizing: border-box;
+    transform: translate(0,-100%);
+    transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    z-index: 20;
+    overflow: hidden;
+}
+
+#controler div
+{
+    width: 100%;
+    line-height: 45px;
+    text-align: left;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    text-indent: 10px;
+}
+
+.stylesControler
+{
+    cursor: pointer;
+}
+
+.stylesControler:hover
+{
+    background-color: #F75C2F; 
+}
+
+#puzzleHeight,#barrelHeight,#squareSize
+{
+    overflow: hidden;
+}
+
+.choose
+{
+    background-color: #F75C2F;
+}
+
+.hidden
+{
+    display: none;
+}
+
+input
+{
+    width: 155px;
+}
+
+#layout,#fullscreen,#gutter,#puzzleHeight,#coulumn,#barrelHeight,#squareSize
+{
+    background-color: rgba(0,0,0,0.5);
+    cursor: default;
+}
+
+#addImage
+{
+    border-top: 1px solid rgba(200,200,200,0.5);
+}
